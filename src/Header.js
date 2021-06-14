@@ -1,0 +1,14 @@
+import React, { Component } from 'react'
+
+
+
+
+export default class Header extends Component {
+    render() {
+        return (
+            <div>
+                <h2 className="header-title">Gotta Catch 'em All!</h2>
+            </div>
+        )
+    }
+}
