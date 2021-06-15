@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PokeList from './PokeList'
+import Pokedex from './Pokedex.js';
 
 
 
@@ -9,7 +9,7 @@ export default class Body extends Component {
         return (
             <main className="main-section">
                 <section>
-                    <PokeList />
+                    <Pokedex />
                 </section>
             </main>
         )
