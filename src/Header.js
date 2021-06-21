@@ -9,7 +9,7 @@ import './PokeItem.css';
 export default class Header extends Component {
     render() {
         return (
-            <div className="nav-links">
+            <div className="header">
                 <h2 className="header-title">Gotta Catch 'em All!</h2>
                 <NavLink className="nav-link" exact to ="/">
                     Home
