@@ -1,15 +1,15 @@
-.header-title {
+.header-title, .nav-link {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-.header {
+.header, .controls {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 15px;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
