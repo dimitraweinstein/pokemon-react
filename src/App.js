@@ -13,7 +13,7 @@ import Pokedex from './Pokedex';
 
 
 
-class App extends React.Component {
+class App extends Component {
   render()   {
     return (
         <BrowserRouter>
