@@ -4,6 +4,7 @@ import Spinner from './Spinner.js';
 import Dropdown from './Dropdown.js';
 import './PokeItem.css';
 
+
 const sleep = (x) => new Promise((res, rej) => setTimeout (() => {res() }, x))
 
 export default class Pokedex extends Component {
@@ -59,6 +60,7 @@ export default class Pokedex extends Component {
                             ? <Spinner />
                             : this.state.pokedex.map(pokemon =>
                         <div className='poke-div'>
+                            {/* <PokeItem /> */}
                             <p>{ pokemon.pokemon }</p>
                             <p>{ pokemon.type_2 }</p>
                             <p>{ pokemon.hp }</p>
