@@ -49,7 +49,7 @@ export default class Pokedex extends Component {
     render() {
 
         return (
-            <main>
+            <main className="controls">
                 <input onChange={this.handleChange} />
                 <Dropdown event={this.handleSort} />
                 <button onClick={this.handleClick}>Fetch!</button>
