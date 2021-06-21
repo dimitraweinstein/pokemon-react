@@ -1,3 +1,19 @@
 .header-title {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 10px;
+    padding: 10px;
 }
