@@ -7,7 +7,8 @@ const sleep = (x) => new Promise((res, rej) => setTimeout (() => {res() }, x))
 export default class Pokedex extends Component {
     state = { 
         pokedex: [], 
-        loading: false, 
+        loading: false,
+        query: '' ,
     }
 
     componentDidMount = async () => {
@@ -18,11 +19,15 @@ export default class Pokedex extends Component {
         await this.fetch();
     }
 
+    handleChange = async (e) => {
+        this.setState({ query: e.target.value });
+    }
+
     fetch = async () => {
         this.setState({ loading: true });
-        const response = await request.get('https://pokedex-alchemy.herokuapp.com/api/pokedex');
+        const response = await request.get(`https://pokedex-alchemy.herokuapp.com/api/pokedex?pokemon=${this.state.query}`);
 
-        await sleep(1500)
+        await sleep(1200)
         this.setState({ loading: false });
         this.setState({ pokedex: response.body.results });
     }
@@ -36,7 +41,7 @@ export default class Pokedex extends Component {
 
                     {this.state.loading
                         ? <Spinner />
-                        : this.state.pokedex.map(pokemon => 
+                        : this.state.pokedex.map(pokemon =>
                     <div>
                         <p>{ pokemon.pokemon }</p>
                         <p>{ pokemon.type_2 }</p>
